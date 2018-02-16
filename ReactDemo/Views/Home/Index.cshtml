@@ -1,0 +1,27 @@
+﻿@* This is the index page for the Home controller *@
+@model IEnumerable<ReactDemo.Models.CommentModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hello React</title>
+</head>
+<body>
+    <div id="content">
+    </div>
+    @* ReactJS *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+    @* Remarkable *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
+    @* JSX File *@
+    @*<script src="@Url.Content("~/Scripts/Tutorial.jsx")"></script>*@
+    @Scripts.Render("~/bundles/main")
+    @Html.ReactInitJavaScript()
+</body>
+</html>
